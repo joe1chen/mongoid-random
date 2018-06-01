@@ -21,10 +21,11 @@ Gem::Specification.new do |s|
   s.add_dependency('mongoid', [ '>= 3.0.0' ])
 
   s.add_development_dependency('rspec', [ '>= 2.13.0' ])
+  s.add_development_dependency('rake')
   s.add_development_dependency('guard', [ '>= 1.8.0' ])
   s.add_development_dependency('guard-rspec', [ '>= 2.5.0' ])
   s.add_development_dependency('guard-spork', [ '>= 1.5.0' ])
   s.add_development_dependency('listen', [ '>= 1.0.0' ])
-  s.add_development_dependency('database_cleaner', [ '~> 0.9.0 ' ])
+  s.add_development_dependency('database_cleaner')
 
 end

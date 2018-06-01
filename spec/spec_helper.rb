@@ -1,8 +1,14 @@
 require 'rubygems'
 require 'spork'
+require 'mongoid'
 
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
+
+Mongoid.configure do |config|
+  name = "mongoid_random_test"
+  config.respond_to?(:connect_to) ? config.connect_to(name) : config.master = Mongo::Connection.new.db(name)
+end
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
@@ -19,7 +25,6 @@ Spork.prefork do
   RSpec.configure do |config|
 
     config.before(:suite) do
-      Mongoid.load!("mongoid.yml", :test)
       DatabaseCleaner[:mongoid].strategy = :truncation
     end
 

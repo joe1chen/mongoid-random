@@ -18,22 +18,15 @@ Spork.prefork do
   require 'rspec'
   require 'mongoid'
   require 'mongoid-random'
-  require 'database_cleaner'
+  require "database_cleaner/mongoid"
 
   Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
-  RSpec.configure do |config|
+  DatabaseCleaner[:mongoid].strategy = [:deletion]
 
-    config.before(:suite) do
-      DatabaseCleaner[:mongoid].strategy = :truncation
-    end
-
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
-
+  RSpec.configure do |c|
+    c.before(:each) { DatabaseCleaner.clean }
   end
-
 end
 
 Spork.each_run do

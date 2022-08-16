@@ -26,6 +26,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('guard-rspec', [ '>= 2.5.0' ])
   s.add_development_dependency('guard-spork', [ '>= 1.5.0' ])
   s.add_development_dependency('listen', [ '>= 1.0.0' ])
-  s.add_development_dependency('database_cleaner')
+  s.add_development_dependency('database_cleaner-mongoid')
 
 end

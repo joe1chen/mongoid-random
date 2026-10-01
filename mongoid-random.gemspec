@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Mongoid::Random::VERSION
   s.authors     = ["Dave Krupinski"]
   s.email       = ["dave@davekrupinski.com"]
-  s.homepage    = "https://github.com/davekrupinski/mongoid-random"
+  s.homepage    = "https://github.com/joe1chen/mongoid-random"
   s.summary     = "Randomization extensions for Mongoid documents"
   s.description = "Add a random key to all documents in a collection for random retrieval"
 

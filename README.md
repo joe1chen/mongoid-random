@@ -30,11 +30,12 @@ The gemspec allows `mongoid >= 3.0, < 10`; only the versions above are tested.
 
 ## Installation
 
-This fork is not published to RubyGems; install it from GitHub. The gem name is `mongoid-random`:
+This fork is not published to RubyGems; install it from GitHub, pinned to a release tag
+([releases](https://github.com/joe1chen/mongoid-random/releases)). The gem name is `mongoid-random`:
 
 ```ruby
 # Gemfile
-gem 'mongoid-random', github: 'joe1chen/mongoid-random'
+gem 'mongoid-random', github: 'joe1chen/mongoid-random', tag: 'v0.2.0'
 ```
 
 Then `bundle install`.
@@ -87,10 +88,10 @@ To add a combination to CI, add a row to `matrix.include` in `.github/workflows/
 
 ## History
 
-- **0.1.1+ (DOGOnews fork)** — Rails 6 / Mongoid 7 support and `database_cleaner-mongoid` (2020–2022);
-  GitHub Actions matrix up to Ruby 3.4 / Rails 8.0 / Mongoid 9.0 / MongoDB 8.0, plain RSpec 3.13 harness
-  instead of Spork/Guard (2026).
-- **Original** — by Dave Krupinski.
+Dave Krupinski's original (2011, released to RubyGems as 0.0.1 and 0.1.0 for Mongoid 3 in 2013) was continued by
+DOGOnews in this fork: 0.1.1 (2018: specs running on Mongoid 3–5), then 0.2.0 (2026: tested on Mongoid 7.5–9.x
+with current Ruby/Rails/MongoDB by a GitHub Actions matrix, plain RSpec 3.13 harness).
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## Credits
 
